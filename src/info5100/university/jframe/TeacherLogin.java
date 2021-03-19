@@ -4,7 +4,11 @@
  * and open the template in the editor.
  */
 package info5100.university.jframe;
-
+ import java.awt.Graphics;  
+ import java.awt.Image;  
+ import java.awt.Toolkit;  
+import javax.swing.JOptionPane;
+ import javax.swing.JPanel;  
 /**
  *
  * @author juhip
@@ -31,7 +35,13 @@ public class TeacherLogin extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        jPanel2 = new JPanel() {  
+            public void paintComponent(Graphics g) {  
+                Image img = Toolkit.getDefaultToolkit().getImage(  
+                    TeacherLogin.class.getResource("/image/Teacher-image.png"));  
+                g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);  
+            }  
+        };
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);

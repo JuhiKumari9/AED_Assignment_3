@@ -194,6 +194,9 @@
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="panelTeacher">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new JPanel() {  &#xa;   public void paintComponent(Graphics g) {  &#xa;     Image img = Toolkit.getDefaultToolkit().getImage(  &#xa;     MainJFrame.class.getResource(&quot;/image/Teacher-image.png&quot;));  &#xa;     g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);  &#xa;     }  &#xa;   };"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
               <CardConstraints cardName="teacherCard"/>

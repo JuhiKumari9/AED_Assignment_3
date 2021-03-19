@@ -44,7 +44,13 @@ public class MainJFrame extends javax.swing.JFrame {
         textStuPassword = new javax.swing.JTextField();
         btnStuLogin = new javax.swing.JButton();
         btnStuSignout = new javax.swing.JButton();
-        panelTeacher = new javax.swing.JPanel();
+        panelTeacher = new JPanel() {
+            public void paintComponent(Graphics g) {
+                Image img = Toolkit.getDefaultToolkit().getImage(
+                    MainJFrame.class.getResource("/image/Teacher-image.png"));
+                g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
+            }
+        };
         labelTeacher = new javax.swing.JLabel();
         lableTeacherPass = new javax.swing.JLabel();
         lablTeacherUserName = new javax.swing.JLabel();
