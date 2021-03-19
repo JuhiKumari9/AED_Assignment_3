@@ -35,7 +35,7 @@ public class StudentLogin extends javax.swing.JFrame {
         WorkArea = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jButton3.setText("Courses");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
