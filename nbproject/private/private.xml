@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/juhip/OneDrive/Documents/GitHub/Info5001-University-Example/Info5001-University-Example/src/info5100/university/example/CourseCatalog/CourseCatalog.java</file>
-            <file>file:/C:/Users/juhip/OneDrive/Documents/GitHub/Info5001-University-Example/Info5001-University-Example/src/info5100/university/example/Info5001UniversityExample.java</file>
-            <file>file:/C:/Users/juhip/OneDrive/Documents/GitHub/Info5001-University-Example/Info5001-University-Example/src/info5100/university/example/Department/Department.java</file>
-            <file>file:/C:/Users/juhip/OneDrive/Documents/GitHub/Info5001-University-Example/Info5001-University-Example/src/info5100/university/example/Persona/PersonDirectory.java</file>
+            <file>file:/Users/ababar/NetBeansProjects/webDev/src/info5100/university/jframe/AdminLogin.java</file>
+            <file>file:/Users/ababar/NetBeansProjects/webDev/src/info5100/university/jframe/StudentLogin.java</file>
+            <file>file:/Users/ababar/NetBeansProjects/webDev/src/info5100/university/jframe/MainJFrame.java</file>
+            <file>file:/Users/ababar/NetBeansProjects/webDev/src/info5100/university/jframe/TeacherLogin.java</file>
+            <file>file:/Users/ababar/NetBeansProjects/webDev/src/info5100/university/jframe/DashboardJPanel.java</file>
         </group>
     </open-files>
 </project-private>

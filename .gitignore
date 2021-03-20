@@ -1,0 +1,9 @@
+/build/
+/webDev/nbproject/private/
+/webDev/nbproject/private/
+/webDev/Assignment_2/nbproject/private/
+/webDev/build/
+build/
+.DS_Store
+*.class
+*.class
