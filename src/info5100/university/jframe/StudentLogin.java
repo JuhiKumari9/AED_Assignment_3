@@ -27,29 +27,29 @@ public class StudentLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSplitPane2 = new javax.swing.JSplitPane();
+        splitPaneStudent = new javax.swing.JSplitPane();
         ControlPanel = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnStudCourses = new javax.swing.JButton();
+        btnGrades = new javax.swing.JButton();
+        btnDashboard = new javax.swing.JButton();
         WorkArea = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        lablStudDetails = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jButton3.setText("Courses");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnStudCourses.setText("Courses");
+        btnStudCourses.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnStudCoursesActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Grades");
+        btnGrades.setText("Grades");
 
-        jButton5.setText("Dashboard");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btnDashboard.setText("Dashboard");
+        btnDashboard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btnDashboardActionPerformed(evt);
             }
         });
 
@@ -60,26 +60,26 @@ public class StudentLogin extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ControlPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(ControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnStudCourses, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ControlPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnGrades, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         ControlPanelLayout.setVerticalGroup(
             ControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ControlPanelLayout.createSequentialGroup()
                 .addGap(151, 151, 151)
-                .addComponent(jButton3)
+                .addComponent(btnStudCourses)
                 .addGap(69, 69, 69)
-                .addComponent(jButton4)
+                .addComponent(btnGrades)
                 .addGap(71, 71, 71)
-                .addComponent(jButton5)
+                .addComponent(btnDashboard)
                 .addContainerGap(156, Short.MAX_VALUE))
         );
 
-        jSplitPane2.setLeftComponent(ControlPanel);
+        splitPaneStudent.setLeftComponent(ControlPanel);
 
         javax.swing.GroupLayout WorkAreaLayout = new javax.swing.GroupLayout(WorkArea);
         WorkArea.setLayout(WorkAreaLayout);
@@ -92,41 +92,42 @@ public class StudentLogin extends javax.swing.JFrame {
             .addGap(0, 516, Short.MAX_VALUE)
         );
 
-        jSplitPane2.setRightComponent(WorkArea);
+        splitPaneStudent.setRightComponent(WorkArea);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Student Details");
+        lablStudDetails.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lablStudDetails.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lablStudDetails.setText("Student Details");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane2)
+            .addComponent(splitPaneStudent)
             .addGroup(layout.createSequentialGroup()
                 .addGap(252, 252, 252)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lablStudDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                .addComponent(lablStudDetails, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(jSplitPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(splitPaneStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btnDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDashboardActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_btnDashboardActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void btnStudCoursesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStudCoursesActionPerformed
+          StudentCourses studCourse = new StudentCourses();
+          splitPaneStudent.setRightComponent(studCourse);
+    }//GEN-LAST:event_btnStudCoursesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,10 +167,10 @@ public class StudentLogin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ControlPanel;
     private javax.swing.JPanel WorkArea;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JSplitPane jSplitPane2;
+    private javax.swing.JButton btnDashboard;
+    private javax.swing.JButton btnGrades;
+    private javax.swing.JButton btnStudCourses;
+    private javax.swing.JLabel lablStudDetails;
+    private javax.swing.JSplitPane splitPaneStudent;
     // End of variables declaration//GEN-END:variables
 }
