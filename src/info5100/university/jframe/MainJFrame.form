@@ -34,7 +34,6 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="207" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="btnTeacher" max="32767" attributes="0"/>
                           <Component id="btnAdmin" alignment="0" max="32767" attributes="0"/>
@@ -242,9 +241,9 @@
                                   <Component id="lableAdminPass" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="textAdminPassword" min="-2" pref="149" max="-2" attributes="0"/>
-                                  <Component id="textAdminUserName" min="-2" pref="149" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="textAdminUserName" pref="149" max="32767" attributes="0"/>
+                                  <Component id="textAdminPassword" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -256,6 +255,10 @@
                               <Component id="btnAdminLogin" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="btnAdminSignout" min="-2" pref="84" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="193" max="-2" attributes="0"/>
+                              <Component id="adminLoginError" min="-2" pref="202" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="665" max="32767" attributes="0"/>
@@ -275,14 +278,16 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lableAdminPass" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="textAdminPassword" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="textAdminPassword" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="adminLoginError" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnAdminLogin" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnAdminSignout" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="448" max="32767" attributes="0"/>
+                      <EmptySpace pref="464" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -308,8 +313,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="textAdminUserName">
             </Component>
-            <Component class="javax.swing.JTextField" name="textAdminPassword">
-            </Component>
             <Component class="javax.swing.JButton" name="btnAdminLogin">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Login"/>
@@ -322,6 +325,10 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Sign Out"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="textAdminPassword">
+            </Component>
+            <Component class="javax.swing.JLabel" name="adminLoginError">
             </Component>
           </SubComponents>
         </Container>

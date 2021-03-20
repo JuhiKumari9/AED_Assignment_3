@@ -5,6 +5,7 @@
  */
 package info5100.university.jframe;
 import java.awt.CardLayout;
+import java.awt.Color;
  import java.awt.Graphics;  
  import java.awt.Image;  
  import java.awt.Toolkit;  
@@ -22,6 +23,7 @@ public class MainJFrame extends javax.swing.JFrame {
     public MainJFrame() {
 
         initComponents();
+        setExtendedState(MainJFrame.MAXIMIZED_BOTH);
     }
     
 
@@ -63,9 +65,10 @@ public class MainJFrame extends javax.swing.JFrame {
         lableAdminPass = new javax.swing.JLabel();
         lablAdminUserName = new javax.swing.JLabel();
         textAdminUserName = new javax.swing.JTextField();
-        textAdminPassword = new javax.swing.JTextField();
         btnAdminLogin = new javax.swing.JButton();
         btnAdminSignout = new javax.swing.JButton();
+        textAdminPassword = new javax.swing.JPasswordField();
+        adminLoginError = new javax.swing.JLabel();
         panelStudent = new JPanel() {
             public void paintComponent(Graphics g) {
                 Image img = Toolkit.getDefaultToolkit().getImage(
@@ -205,9 +208,9 @@ public class MainJFrame extends javax.swing.JFrame {
                             .addComponent(lablAdminUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lableAdminPass, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(42, 42, 42)
-                        .addGroup(panelAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(textAdminPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textAdminUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(panelAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(textAdminUserName, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+                            .addComponent(textAdminPassword)))
                     .addGroup(panelAdminLayout.createSequentialGroup()
                         .addGap(202, 202, 202)
                         .addComponent(lableAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -215,7 +218,10 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addGap(146, 146, 146)
                         .addComponent(btnAdminLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnAdminSignout, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnAdminSignout, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelAdminLayout.createSequentialGroup()
+                        .addGap(193, 193, 193)
+                        .addComponent(adminLoginError, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(665, Short.MAX_VALUE))
         );
         panelAdminLayout.setVerticalGroup(
@@ -230,12 +236,14 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(panelAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lableAdminPass, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textAdminPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
+                    .addComponent(textAdminPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(adminLoginError)
+                .addGap(18, 18, 18)
                 .addGroup(panelAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdminLogin)
                     .addComponent(btnAdminSignout))
-                .addContainerGap(448, Short.MAX_VALUE))
+                .addContainerGap(464, Short.MAX_VALUE))
         );
 
         mainJPanel.add(panelAdmin, "adminCard");
@@ -316,7 +324,7 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(207, 207, 207)
+                        .addGap(0, 0, 0)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnTeacher, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -382,7 +390,14 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnAdminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminLoginActionPerformed
         AdminLogin adminLog = new AdminLogin();
+//         adminLog.setVisible(true);
+         if (textAdminUserName.getText().trim().equals("admin") && textAdminPassword.getText().trim().equals("admin")) {
         adminLog.setVisible(true);
+        adminLoginError.setText("");
+         } else {
+             adminLoginError.setForeground(Color.RED);
+             adminLoginError.setText(" Invalid username or password.");
+         }
     }//GEN-LAST:event_btnAdminLoginActionPerformed
 
     /**
@@ -422,6 +437,7 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel adminLoginError;
     private javax.swing.JButton btnAdmin;
     private javax.swing.JButton btnAdminLogin;
     private javax.swing.JButton btnAdminSignout;
@@ -445,7 +461,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel panelAdmin;
     private javax.swing.JPanel panelStudent;
     private javax.swing.JPanel panelTeacher;
-    private javax.swing.JTextField textAdminPassword;
+    private javax.swing.JPasswordField textAdminPassword;
     private javax.swing.JTextField textAdminUserName;
     private javax.swing.JTextField textStuPassword;
     private javax.swing.JTextField textStuUserName;
