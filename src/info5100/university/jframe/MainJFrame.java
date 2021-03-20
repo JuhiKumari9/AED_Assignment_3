@@ -370,7 +370,8 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnStudentActionPerformed
 
     private void btnStuLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStuLoginActionPerformed
-       StudentLogin stuLogin = new StudentLogin();
+       String username=textStuUserName.getText();
+        StudentLogin stuLogin = new StudentLogin(username);
        stuLogin.setVisible(true);
     }//GEN-LAST:event_btnStuLoginActionPerformed
 
