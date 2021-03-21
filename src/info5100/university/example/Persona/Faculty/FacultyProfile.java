@@ -18,6 +18,22 @@ public class FacultyProfile {
     Person person;
     ArrayList <FacultyAssignment> facultyassignments; 
 
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
+    public ArrayList<FacultyAssignment> getFacultyassignments() {
+        return facultyassignments;
+    }
+
+    public void setFacultyassignments(ArrayList<FacultyAssignment> facultyassignments) {
+        this.facultyassignments = facultyassignments;
+    }
+
     public FacultyProfile(Person p) {
 
         person = p;

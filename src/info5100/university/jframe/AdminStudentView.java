@@ -88,7 +88,7 @@ public class AdminStudentView extends javax.swing.JPanel {
         });
 
         lblDob.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblDob.setText("Date Of Department:");
+        lblDob.setText("Department:");
         lblDob.setPreferredSize(new java.awt.Dimension(30, 30));
 
         lblFirstName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);

@@ -42,7 +42,6 @@ public class AdminLogin extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         workareajPanel = new JPanel() {  
             public void paintComponent(Graphics g) {  
@@ -53,8 +52,6 @@ public class AdminLogin extends javax.swing.JFrame {
         };
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1450, 760));
-        setPreferredSize(new java.awt.Dimension(1450, 760));
 
         jSplitPane1.setDividerSize(0);
 
@@ -89,8 +86,6 @@ public class AdminLogin extends javax.swing.JFrame {
 
         jButton6.setText("Courses");
 
-        jButton7.setText("SetUp");
-
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Hello Admin");
@@ -103,7 +98,6 @@ public class AdminLogin extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addGroup(adminControljPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel1)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -129,9 +123,7 @@ public class AdminLogin extends javax.swing.JFrame {
                 .addComponent(jButton5)
                 .addGap(30, 30, 30)
                 .addComponent(jButton6)
-                .addGap(29, 29, 29)
-                .addComponent(jButton7)
-                .addContainerGap())
+                .addGap(377, 377, 377))
         );
 
         jSplitPane1.setLeftComponent(adminControljPanel);
@@ -224,7 +216,6 @@ public class AdminLogin extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JPanel workareajPanel;

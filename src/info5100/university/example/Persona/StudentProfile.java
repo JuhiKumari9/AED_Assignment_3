@@ -15,7 +15,31 @@ import info5100.university.example.Persona.EmploymentHistory.EmploymentHistroy;
 public class StudentProfile {
 
     Person person;
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
     Transcript transcript;
+
+    public Transcript getTranscript() {
+        return transcript;
+    }
+
+    public void setTranscript(Transcript transcript) {
+        this.transcript = transcript;
+    }
+
+    public EmploymentHistroy getEmploymenthistory() {
+        return employmenthistory;
+    }
+
+    public void setEmploymenthistory(EmploymentHistroy employmenthistory) {
+        this.employmenthistory = employmenthistory;
+    }
     EmploymentHistroy employmenthistory;
     
 

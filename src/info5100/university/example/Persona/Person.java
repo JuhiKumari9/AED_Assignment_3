@@ -12,9 +12,19 @@ package info5100.university.example.Persona;
 public class Person {
     
     String id;
-    public Person (String id){
+    String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public Person (String id, String name){
         
         this.id = id;
+        this.name = name;
     }
     public String getPersonId(){
         return id;

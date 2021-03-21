@@ -18,6 +18,22 @@ public class FacultyDirectory {
     Department department;
     ArrayList<FacultyProfile> teacherlist;
 
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+    public ArrayList<FacultyProfile> getTeacherlist() {
+        return teacherlist;
+    }
+
+    public void setTeacherlist(ArrayList<FacultyProfile> teacherlist) {
+        this.teacherlist = teacherlist;
+    }
+
     public FacultyDirectory(Department d) {
 
         department = d;

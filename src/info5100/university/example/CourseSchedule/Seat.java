@@ -13,6 +13,38 @@ public class Seat {
     
     Boolean occupied; 
     int number;
+
+    public Boolean getOccupied() {
+        return occupied;
+    }
+
+    public void setOccupied(Boolean occupied) {
+        this.occupied = occupied;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public SeatAssignment getSeatassignment() {
+        return seatassignment;
+    }
+
+    public void setSeatassignment(SeatAssignment seatassignment) {
+        this.seatassignment = seatassignment;
+    }
+
+    public CourseOffer getCourseoffer() {
+        return courseoffer;
+    }
+
+    public void setCourseoffer(CourseOffer courseoffer) {
+        this.courseoffer = courseoffer;
+    }
     SeatAssignment seatassignment;
     CourseOffer courseoffer;
     public Seat (CourseOffer co, int n){
@@ -28,7 +60,7 @@ public class Seat {
     }
     public SeatAssignment newSeatAssignment(){
         
-        seatassignment = new SeatAssignment(); //links seatassignment to seat
+        seatassignment = new SeatAssignment(this); //links seatassignment to seat
         occupied = true;   
         return seatassignment;
     }

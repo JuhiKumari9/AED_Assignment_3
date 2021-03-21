@@ -17,7 +17,31 @@ import java.util.ArrayList;
 public class CourseOffer {
 
     Course course;
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
+    }
     ArrayList<Seat> seatlist;
+
+    public ArrayList<Seat> getSeatlist() {
+        return seatlist;
+    }
+
+    public void setSeatlist(ArrayList<Seat> seatlist) {
+        this.seatlist = seatlist;
+    }
+
+    public FacultyAssignment getFacultyassignment() {
+        return facultyassignment;
+    }
+
+    public void setFacultyassignment(FacultyAssignment facultyassignment) {
+        this.facultyassignment = facultyassignment;
+    }
     FacultyAssignment facultyassignment;
 
     public CourseOffer(Course c) {

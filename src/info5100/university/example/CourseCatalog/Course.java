@@ -13,6 +13,30 @@ public class Course {
     String number;
     String name;
     int credits;
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public int getCredits() {
+        return credits;
+    }
+
+    public void setCredits(int credits) {
+        this.credits = credits;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
     int price = 1500; //per credit hour
     
     public Course(String n, String numb, int ch){
@@ -25,6 +49,16 @@ public class Course {
     public String getCOurseNumber(){
         return number;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    
     
     public int getCoursePrice(){
         return price*credits;

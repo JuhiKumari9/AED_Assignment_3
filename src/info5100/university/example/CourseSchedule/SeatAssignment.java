@@ -13,15 +13,31 @@ public class SeatAssignment {
     
     Seat seat;
     CourseLoad courseload;
-    public SeatAssignment(CourseLoad cl, Seat s){
-        seat = s;
-        courseload = cl;
+
+    public Seat getSeat() {
+        return this.seat;
+    }
+
+    public void setSeat(Seat seat) {
+        this.seat = seat;
+    }
+
+    public CourseLoad getCourseload() {
+        return courseload;
+    }
+
+    public void setCourseload(CourseLoad courseload) {
+        this.courseload = courseload;
+    }
+    public SeatAssignment( Seat s){
+        this.seat = s;
+//        courseload = cl;
     }
         public SeatAssignment(){
 
     }
     public void assignSeatToStudent(CourseLoad cl){
-        courseload = cl;
+        this.courseload = cl;
     }
     
 }

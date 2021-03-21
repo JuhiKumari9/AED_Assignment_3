@@ -14,6 +14,22 @@ import java.util.ArrayList;
 public class CourseLoad {
     String semester;
     ArrayList<SeatAssignment> seatassignments;
+
+    public String getSemester() {
+        return semester;
+    }
+
+    public void setSemester(String semester) {
+        this.semester = semester;
+    }
+
+    public ArrayList<SeatAssignment> getSeatassignments() {
+        return seatassignments;
+    }
+
+    public void setSeatassignments(ArrayList<SeatAssignment> seatassignments) {
+        this.seatassignments = seatassignments;
+    }
     
     public CourseLoad(String s){
         seatassignments = new ArrayList<SeatAssignment>();
