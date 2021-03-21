@@ -73,6 +73,9 @@ public class CourseRating extends ApplicationFrame {
 
         jPanel1 = new javax.swing.JPanel();
 
+        setBackground(new java.awt.Color(187, 209, 223));
+
+        jPanel1.setBackground(new java.awt.Color(187, 209, 223));
         jPanel1.setPreferredSize(new java.awt.Dimension(1257, 704));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -86,8 +89,8 @@ public class CourseRating extends ApplicationFrame {
             .addGap(0, 581, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()

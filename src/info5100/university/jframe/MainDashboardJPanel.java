@@ -92,7 +92,7 @@ public class MainDashboardJPanel extends javax.swing.JPanel {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("1");
 
-        courseRankingbtn.setText("Cource Ranking");
+        courseRankingbtn.setText("Course Ranking");
         courseRankingbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 courseRankingbtnActionPerformed(evt);

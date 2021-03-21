@@ -124,6 +124,8 @@ public class DashboardJPanel extends ApplicationFrame {
 
         jPanel1 = new javax.swing.JPanel();
 
+        jPanel1.setBackground(new java.awt.Color(187, 209, 223));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -135,8 +137,8 @@ public class DashboardJPanel extends ApplicationFrame {
             .addGap(0, 576, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
