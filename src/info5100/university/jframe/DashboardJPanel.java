@@ -13,20 +13,22 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.data.general.DefaultPieDataset;
+import org.jfree.data.general.PieDataset;
 import org.jfree.ui.ApplicationFrame;
 
 /**
  *
  * @author ababar
  */
-public class DashboardJPanel extends ApplicationFrame {
+public class DashboardJPanel extends JFrame {
 
     public DashboardJPanel(String applicationTitle, String chartTitle) {
-        
+
         super("");
-        
+
         JFreeChart barChart = ChartFactory.createBarChart(
-                chartTitle,
+                "Job Performance of Students and Academic Units",
                 "Category",
                 "",
                 createDataset(),
@@ -41,18 +43,29 @@ public class DashboardJPanel extends ApplicationFrame {
                 PlotOrientation.VERTICAL,
                 true, true, false);
 
+        JFreeChart pieChart = ChartFactory.createPieChart(
+                "Employment Status",
+                createPieChartDataset());
+
         ChartPanel chartPanel = new ChartPanel(barChart);
         ChartPanel chartPanel2 = new ChartPanel(lineChart);
+        ChartPanel chartPanel3 = new ChartPanel(pieChart);
 
         CollegeRanking collegeRanking = new CollegeRanking();
         JFrame frame = new JFrame("Dashboard");
+
+        chartPanel.setPreferredSize(new java.awt.Dimension(720, 450));
+        chartPanel2.setPreferredSize(new java.awt.Dimension(720, 300));
+        chartPanel3.setPreferredSize(new java.awt.Dimension(720, 300));
+        
         
         frame.getContentPane().add(chartPanel, BorderLayout.WEST);
-        frame.getContentPane().add(chartPanel2, BorderLayout.EAST);
+        frame.getContentPane().add(chartPanel2, BorderLayout.SOUTH);
         frame.getContentPane().add(collegeRanking, BorderLayout.NORTH);
+        frame.getContentPane().add(chartPanel3, BorderLayout.EAST);
+        
 //      ChartPanel chartPanel = new ChartPanel( barChart );        
-        chartPanel.setPreferredSize(new java.awt.Dimension(720, 450));
-        chartPanel2.setPreferredSize(new java.awt.Dimension(720, 500));
+        
         frame.pack();
         frame.setVisible(true);
 //      setContentPane( chartPanel ); 
@@ -88,23 +101,31 @@ public class DashboardJPanel extends ApplicationFrame {
     }
 
     private CategoryDataset createLineChartDataset() {
-       final String jobPerformance = "Courses Rating";        
+        final String jobPerformance = "Courses Rating";
 //      final String ford = "FORD";        
-      final String course1 = "AED";        
-      final String course2 = "DMDD";        
-      final String course3 = "Web Design";        
-      final String course4 = "PSA"; 
-      final String course5 = "Web Tools";
-      final DefaultCategoryDataset dataset = 
-      new DefaultCategoryDataset( );  
+        final String course1 = "AED";
+        final String course2 = "DMDD";
+        final String course3 = "Web Design";
+        final String course4 = "PSA";
+        final String course5 = "Web Tools";
+        final DefaultCategoryDataset dataset
+                = new DefaultCategoryDataset();
 
-      dataset.addValue( 4.0 , jobPerformance , course1 );        
-      dataset.addValue( 2.8 , jobPerformance , course2);        
-      dataset.addValue( 4.0 , jobPerformance , course3 ); 
-      dataset.addValue( 3.8 , jobPerformance , course4 );
-      dataset.addValue( 3.8 , jobPerformance , course5 );             
+        dataset.addValue(4.0, jobPerformance, course1);
+        dataset.addValue(2.8, jobPerformance, course2);
+        dataset.addValue(4.0, jobPerformance, course3);
+        dataset.addValue(3.8, jobPerformance, course4);
+        dataset.addValue(3.8, jobPerformance, course5);
 
-      return dataset;
+        return dataset;
+    }
+
+    private PieDataset createPieChartDataset() {
+        final DefaultPieDataset dataset = new DefaultPieDataset();
+        dataset.setValue("Yes", new Double(20));
+        dataset.setValue("No", new Double(2));
+        return dataset;
+
     }
 
     /**

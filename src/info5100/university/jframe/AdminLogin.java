@@ -168,8 +168,9 @@ public class AdminLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        MainDashboardJPanel dashboardJPanel = new MainDashboardJPanel();
-        jSplitPane1.setRightComponent(dashboardJPanel);
+        DashboardJPanel dashboardJPanel= new DashboardJPanel("", "");
+        DashboardJFrame dashboardJFrame = new DashboardJFrame();
+        jSplitPane1.setRightComponent(dashboardJFrame);
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
