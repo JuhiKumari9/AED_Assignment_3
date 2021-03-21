@@ -22,11 +22,7 @@ public class StudentLogin extends javax.swing.JFrame {
     public StudentLogin() {
         initComponents();
     }
-     public StudentLogin(String username) {
-        initComponents();
-        this.username=username;
-        
-    }
+     
 
     /**
      * This method is called from within the constructor to initialize the form.
