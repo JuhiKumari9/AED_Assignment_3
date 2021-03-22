@@ -116,7 +116,7 @@ public class Info5001Admin {
         System.out.println("Enter Student Name.");
         String id = "100";
 //        Person p = new Person(id, studentName.next());
-        Person person = pd.newPerson("0112303", studentName.next());
+        Person person = pd.newPerson("0112303", studentName.nextLine());
         //Student
 //        StudentDirectory sd = department.getStudentDirectory();
         StudentProfile student = sd.newStudentProfile(person);

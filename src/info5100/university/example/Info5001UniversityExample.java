@@ -6,11 +6,9 @@
 package info5100.university.example;
 
 import info5100.university.example.CourseCatalog.Course;
-import info5100.university.example.CourseCatalog.CourseCatalog;
 import info5100.university.example.CourseSchedule.CourseLoad;
 import info5100.university.example.CourseSchedule.CourseOffer;
 import info5100.university.example.CourseSchedule.CourseSchedule;
-import info5100.university.example.CourseSchedule.Seat;
 import info5100.university.example.CourseSchedule.SeatAssignment;
 import info5100.university.example.Department.Department;
 import info5100.university.example.Persona.Faculty.FacultyAssignment;
@@ -20,10 +18,7 @@ import info5100.university.example.Persona.Person;
 import info5100.university.example.Persona.PersonDirectory;
 import info5100.university.example.Persona.StudentDirectory;
 import info5100.university.example.Persona.StudentProfile;
-import info5100.university.jframe.StudentLogin;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  *
@@ -47,7 +42,7 @@ public class Info5001UniversityExample {
 
 //        CourseCatalog courseCatalog =  new CourseCatalog(department);
         CourseSchedule courseschedule = department.newCourseSchedule("Spring2021");
-//        CourseSchedule courseschedule2 = department.newCourseSchedule("Spring2021");
+        CourseSchedule courseschedule2 = department.newCourseSchedule("Fall2021");
 
         // 
         CourseOffer courseoffer = courseschedule.newCourseOffer(course.getCOurseNumber());
@@ -59,8 +54,9 @@ public class Info5001UniversityExample {
         courseoffer2 = courseschedule.newCourseOffer(course4.getCOurseNumber());
         courseoffer2.generatSeats(5);
 
-//        CourseOffer courseoffer3 = courseschedule2.newCourseOffer(course3.getCOurseNumber());
-//        courseoffer3.generatSeats(30);
+        CourseOffer courseOffer3 = courseschedule2.newCourseOffer(course2.getCOurseNumber());
+        courseOffer3.generatSeats(5);
+
         // Adding faculty to courseOffer
         Person faculty = new Person("007", "Mr. Bugrara");
         FacultyProfile fp = new FacultyProfile(faculty);
@@ -78,7 +74,6 @@ public class Info5001UniversityExample {
         ArrayList<FacultyProfile> facultyProfiles = new ArrayList<FacultyProfile>();
         facultyProfiles.add(fp);
         facultyProfiles.add(fp2);
-//        System.out.println("IsOccupied : " + seat.isOccupied());
 
         FacultyAssignment fa = new FacultyAssignment(fp, courseoffer);
         FacultyAssignment fa2 = new FacultyAssignment(fp2, courseoffer2);
@@ -87,71 +82,61 @@ public class Info5001UniversityExample {
         PersonDirectory pd = department.getPersonDirectory();
         Person person = pd.newPerson("0112303", "Ajinkya Babar");
         Person person2 = pd.newPerson("0112304", "Juhi Kumari");
+        Person person3 = pd.newPerson("0112323", "Amisha Gupta");
 
         //Student
         StudentDirectory sd = department.getStudentDirectory();
         StudentProfile student = sd.newStudentProfile(person);
         StudentProfile student2 = sd.newStudentProfile(person2);
+        StudentProfile student3 = sd.newStudentProfile(person3);
 
         CourseLoad courseload = student.newCourseLoad("Spring2021");
         CourseLoad courseload2 = student2.newCourseLoad("Spring2021");
-//        CourseLoad courseload3 = student.newCourseLoad("Spring2021");
-        //SeatAssignment seatAssignment = courseload.newSeatAssignment(courseoffer); //register student in class
+        CourseLoad courseload3 = student3.newCourseLoad("Spring2021");
+
         courseload2.newSeatAssignment(courseoffer);
 //        courseload.newSeatAssignment(courseoffer23);
         courseload.newSeatAssignment(courseoffer);
 
-//        courseload.registerStudent(seatAssignment);
-//        department.RegisterForAClass("0112303", "INFO 5100", "Spring2021");
+        courseload3.newSeatAssignment(courseOffer3);
+
         department.RegisterForAClass("0112303", "INFO 6210", "Spring2021");
 //        department.RegisterForAClass("0112303", "INFO 6210", "Spring2021");
         department.RegisterForAClass("0112304", "INFO 6205", "Spring2021");
+        department.RegisterForAClass("0112323", "INFO 6150", "Spring2021");
 
         int total = department.calculateRevenuesBySemester("Spring2021");
+        System.out.println("department Name : " + department.getName());
+        System.out.println("------------------List of All Courses-----------------------");
+        for (Course courseList : department.getCourseCatalog().getCourseList()) {
+            System.out.println(courseList.getCOurseNumber() + " - " + courseList.getName()
+                    + " (" + courseList.getCredits() + ")");
+        }
+
+        System.out.println("------------------Faculty Details-----------------------");
+        for (FacultyProfile faL : facultyProfiles) {
+
+            System.out.println("Faculty Profile: " + faL.getPerson().getName());
+            for (FacultyAssignment fa1 : faL.getFacultyassignments()) {
+            }
+        }
 
 // List of students 
-        System.out.println("department Name : " + department.getName());
+        System.out.println("------------------Student Details-----------------------");
         for (StudentProfile sp : department.getStudentDirectory().getStudentlist()) {
-            System.out.println("-----------------------------------------------------------");
+
             System.out.println("Semester : " + sp.getCurrentCourseLoad().getSemester());
             System.out.println("Student Name : " + sp.getPerson().getName() + " ");
 //                    + sp.getTranscript().getCourseLoadBySemester("Spring2021").getSeatassignments());
 
             for (SeatAssignment sa : sp.getTranscript().getCourseLoadBySemester("Spring2021").getSeatassignments()) {
                 System.out.println("Course Name: " + sa.getSeat().getCourseoffer().getCourse().getName());
+                System.out.println("Course Grade: " + sa.calculateGPA());
             }
-//            if (null != sp.getTranscript().getCourseLoadBySemester("Spring2021") && null != sp.getTranscript().getCourseLoadBySemester("Spring2021")) {
-//                for (SeatAssignment sa : sp.getTranscript().getCourseLoadBySemester("Spring2021").getSeatassignments()) {
-//                    System.out.println("Course Name Spring2021: " + sa.getSeat().getCourseoffer().getCourse().getName());
-//                }
-//            }
 
-//             System.out.println("student all : " + sp.getCourseLoadBySemester("Fall2020"));
+            System.out.println("-----------------------------------------------------------");
         }
 
-        //Admin....
-//        for (int i = 0; i < 5; i++) {
-//            Course courseBulk = department.newCourse("Application Engineering and Development", "INFO 5100", 4);
-//            CourseSchedule coursescheduleBulk = department.newCourseSchedule("Fall2020");
-//            CourseOffer courseofferBulk = courseschedule.newCourseOffer(course.getCOurseNumber());
-//            courseofferBulk = courseschedule.newCourseOffer(courseBulk.getCOurseNumber());
-//            courseofferBulk.generatSeats(5);
-//
-//            PersonDirectory pdBulk = department.getPersonDirectory();
-//            Person personBulk = pdBulk.newPerson("0112303", "Ajinkya Babar");
-//            StudentDirectory sdBulk = department.getStudentDirectory();
-//            StudentProfile studentBulk = sdBulk.newStudentProfile(person);
-//
-//            CourseLoad courseloadBulk = studentBulk.newCourseLoad("Fall2020");
-//            //SeatAssignment seatAssignment = courseload.newSeatAssignment(courseoffer); //register student in class
-//            courseloadBulk.newSeatAssignment(courseofferBulk);
-//
-//            department.RegisterForAClass("0112303", "INFO 6150", "Fall2020");
-//
-//        }
-//        
-//       
-//
     }
 
 }

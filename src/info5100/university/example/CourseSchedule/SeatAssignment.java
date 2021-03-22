@@ -13,6 +13,7 @@ public class SeatAssignment {
     
     Seat seat;
     CourseLoad courseload;
+    double gpa = 3.8;
 
     public Seat getSeat() {
         return this.seat;
@@ -38,6 +39,12 @@ public class SeatAssignment {
     }
     public void assignSeatToStudent(CourseLoad cl){
         this.courseload = cl;
+    }
+    
+     public double calculateGPA(){
+         //will add all course mark and divide it by 4
+         
+         return gpa;
     }
     
 }
