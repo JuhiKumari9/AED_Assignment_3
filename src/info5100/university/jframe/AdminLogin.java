@@ -90,6 +90,11 @@ public class AdminLogin extends javax.swing.JFrame {
         });
 
         jButton6.setText("Courses");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 16)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -183,6 +188,11 @@ public class AdminLogin extends javax.swing.JFrame {
         AdminFacultyView adminFaculty = new AdminFacultyView();
         jSplitPane1.setRightComponent(adminFaculty);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        AdminCourse adminCourse= new AdminCourse();
+        jSplitPane1.setRightComponent(adminCourse);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
