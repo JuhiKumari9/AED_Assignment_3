@@ -13,6 +13,7 @@ import java.util.ArrayList;
  */
 public class CourseLoad {
     String semester;
+    
     ArrayList<SeatAssignment> seatassignments;
 
     public String getSemester() {
@@ -49,6 +50,10 @@ public class CourseLoad {
         
         sa.assignSeatToStudent(this);
         seatassignments.add(sa);
+    }
+    
+     public double getGPA(SeatAssignment sa) {
+        return sa.calculateGPA();
     }
     
 }
