@@ -5,7 +5,7 @@
  */
 package info5100.university.jframe;
 
-import org.jfree.ui.RefineryUtilities;
+
 import java.awt.Graphics;  
  import java.awt.Image;  
  import java.awt.Toolkit;  
@@ -76,6 +76,11 @@ public class AdminLogin extends javax.swing.JFrame {
         });
 
         jButton4.setText("Faculty");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Department");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -156,7 +161,8 @@ public class AdminLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        AdminDepartmentView dept = new AdminDepartmentView();
+        jSplitPane1.setRightComponent(dept);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -172,6 +178,11 @@ public class AdminLogin extends javax.swing.JFrame {
         AdminStudentView adminStudentView = new AdminStudentView();
         jSplitPane1.setRightComponent(adminStudentView);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        AdminFacultyView adminFaculty = new AdminFacultyView();
+        jSplitPane1.setRightComponent(adminFaculty);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments

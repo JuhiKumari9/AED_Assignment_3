@@ -136,24 +136,22 @@ public class StudentCourses extends javax.swing.JPanel {
 
     private void btnSelectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectActionPerformed
 
-        TableModel tabel1= tableSelect.getModel();
+        TableModel table1= tableSelect.getModel();
         int[] indexes = tableSelect.getSelectedRows();
         if(indexes.length<0){
             JOptionPane.showMessageDialog(this, "Please select the course");
-            return;
+            
         }else{
-        DefaultTableModel tabel2= (DefaultTableModel) tableRegisterCourse.getModel();
-        TableModel table2 = tableRegisterCourse.getModel();
+        DefaultTableModel table2= (DefaultTableModel) tableRegisterCourse.getModel();
+        //TableModel table2 = tableRegisterCourse.getModel();
          Object[] row = new Object[4];
+         
          for(int i=0; i<indexes.length; i++){
-            row[0] = tableSelect.getValueAt(i, 0);
-            System.out.println("row[0]" + row[0]);
-            row[1] = tableSelect.getValueAt(i, 1);
-            row[2] = tableSelect.getValueAt(i, 2);
-            row[3] = tableSelect.getValueAt(i, 3);
-             System.out.println("row"+ row[i]);
-              tabel2.addRow(row);
+            row[0] = table1.getValueAt(i++, 0);
+            row[1] = table1.getValueAt(i, 1);
+            table2.addRow(row);
          }
+         
         }
     }//GEN-LAST:event_btnSelectActionPerformed
 

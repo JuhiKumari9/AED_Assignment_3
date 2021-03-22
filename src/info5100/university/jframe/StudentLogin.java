@@ -37,7 +37,6 @@ public class StudentLogin extends javax.swing.JFrame {
         ControlPanel = new javax.swing.JPanel();
         btnStudCourses = new javax.swing.JButton();
         btnFeedback = new javax.swing.JButton();
-        btnDashboard = new javax.swing.JButton();
         btnGrades1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         WorkArea = new JPanel() {
@@ -67,13 +66,6 @@ public class StudentLogin extends javax.swing.JFrame {
             }
         });
 
-        btnDashboard.setText("Dashboard");
-        btnDashboard.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDashboardActionPerformed(evt);
-            }
-        });
-
         btnGrades1.setText("Grades");
         btnGrades1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,13 +86,12 @@ public class StudentLogin extends javax.swing.JFrame {
                 .addGroup(ControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnStudCourses, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
                     .addComponent(btnGrades1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnFeedback, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDashboard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnFeedback, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(ControlPanelLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         ControlPanelLayout.setVerticalGroup(
             ControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,9 +104,7 @@ public class StudentLogin extends javax.swing.JFrame {
                 .addComponent(btnGrades1)
                 .addGap(18, 18, 18)
                 .addComponent(btnFeedback)
-                .addGap(18, 18, 18)
-                .addComponent(btnDashboard)
-                .addContainerGap(465, Short.MAX_VALUE))
+                .addContainerGap(530, Short.MAX_VALUE))
         );
 
         splitPaneStudent.setLeftComponent(ControlPanel);
@@ -148,10 +137,6 @@ public class StudentLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
                                        
   
-    private void btnDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDashboardActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnDashboardActionPerformed
-
     private void btnStudCoursesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStudCoursesActionPerformed
           StudentCourses studCourse = new StudentCourses();
           splitPaneStudent.setRightComponent(studCourse);
@@ -208,7 +193,6 @@ public class StudentLogin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ControlPanel;
     private javax.swing.JPanel WorkArea;
-    private javax.swing.JButton btnDashboard;
     private javax.swing.JButton btnFeedback;
     private javax.swing.JButton btnGrades1;
     private javax.swing.JButton btnStudCourses;
